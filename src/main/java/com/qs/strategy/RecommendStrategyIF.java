@@ -5,7 +5,7 @@ package com.qs.strategy;
  *
  * create by fbin 2018/9/9
  */
-public interface RecommendStrategyIF<T> {
+public interface RecommendStrategyIF {
 
     /**
      * 推荐算法调用方法
