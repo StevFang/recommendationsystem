@@ -1,7 +1,7 @@
 package com.qs.factory;
 
 import com.google.common.collect.Lists;
-import com.qs.configuration.RecommenderStrategyTypeEnum;
+import com.qs.enums.RecommenderStrategyTypeEnum;
 import com.qs.strategy.RecommendStrategyIF;
 
 import java.util.List;

@@ -1,5 +1,6 @@
 package com.qs.configuration;
 
+import com.qs.enums.RecommenderStrategyTypeEnum;
 import com.qs.strategy.RecommendStrategyIF;
 import org.springframework.stereotype.Component;
 

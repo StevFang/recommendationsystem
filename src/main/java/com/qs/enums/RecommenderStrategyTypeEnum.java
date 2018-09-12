@@ -1,4 +1,4 @@
-package com.qs.configuration;
+package com.qs.enums;
 
 /**
  * 推荐系统 策略类型
