@@ -9,11 +9,10 @@
 
     <appender name="FILE"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>E:/logs/recommendation-system.log</file>
+        <file>logs/recommendation-system.log</file>
         <append>true</append>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>E:/logs/recommendation-system-%d{yyyy-MM-dd}.%i.log
-            </fileNamePattern>
+            <fileNamePattern>logs/recommendation-system-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>104857600</maxFileSize>
