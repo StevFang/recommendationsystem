@@ -4,6 +4,7 @@ import com.qs.strategy.RecommendStrategyIF;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -13,6 +14,11 @@ import java.util.Map;
  */
 @Component
 public class RecommenderConfig {
+
+    private static RecommenderStrategyTypeEnum recommenderStrategyType = null;
+    private static Map<String, Object> weightOfRecommender = new HashMap<>();
+    private static Map<String, Object> seqOfRecommender = new HashMap<>();
+    private static RecommendStrategyIF current = null;
 
     /**
      * 1. 重载推荐系统配置
@@ -47,7 +53,7 @@ public class RecommenderConfig {
      *
      * @return
      */
-    public Map<String, Object> getRecommenderSeq(){
+    public Map<String, Object> getRecommenderSeq(String recommenderType){
 
         return Collections.emptyMap();
     }
@@ -57,7 +63,7 @@ public class RecommenderConfig {
      *
      * @return
      */
-    public RecommendStrategyIF getRecommendStategy(){
+    public RecommendStrategyIF getRecommendStrategy(){
 
         return null;
     }
