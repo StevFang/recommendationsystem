@@ -16,6 +16,7 @@ public class CollaborativeFilterBaseOnUserStrategy
 
     @Override
     public CollaborativeFilterBaseOnUserDto recommend(Map<String, Object> param) {
+
         return null;
     }
 
