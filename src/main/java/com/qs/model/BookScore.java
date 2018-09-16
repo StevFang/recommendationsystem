@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -15,7 +16,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BookScore {
+public class BookScore implements Serializable {
 
     private User user;
 
@@ -24,5 +25,9 @@ public class BookScore {
     private Date scoreTime;
 
     private BigDecimal score;
+
+    private BigDecimal totalScore;
+
+    private BigDecimal rate;
 
 }

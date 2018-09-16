@@ -31,7 +31,7 @@ public class RecommendService implements RecommendServiceIF {
 
     @Override
     public Map<String, Object> recommendToUser(Long userId) {
-        RecommendAssert.assertNotNull(userId, "userId不能为空！");
+        RecommendAssert.assertNotNull(userId, "用户Id不能为空！");
         // 推荐系统 策略类型
         RecommendStrategyTypeEnum recommendStrategyType = recommendSysConfiguration.getRecommenderType();
         RecommendAssert.assertNotNull(recommendStrategyType, "推荐策略类型未获取到！");
