@@ -24,11 +24,11 @@ import java.util.List;
 /**
  * Created by fbin on 2018/8/28.
  */
-public class RecommenderConfiguration {
+public class RecommendLenskitConfiguration {
 
     private LenskitConfiguration config;
 
-    public RecommenderConfiguration() {
+    public RecommendLenskitConfiguration() {
         // init
         config = init();
         // connect data source

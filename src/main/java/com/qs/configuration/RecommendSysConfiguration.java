@@ -1,7 +1,8 @@
 package com.qs.configuration;
 
-import com.qs.enums.RecommenderStrategyTypeEnum;
+import com.qs.enums.RecommendStrategyTypeEnum;
 import com.qs.strategy.RecommendStrategyIF;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
@@ -14,12 +15,18 @@ import java.util.Map;
  * create by fbin on 2018/9/9
  */
 @Component
-public class RecommenderConfig {
+public class RecommendSysConfiguration implements InitializingBean {
 
-    private static RecommenderStrategyTypeEnum recommenderStrategyType = null;
+    private static RecommendStrategyTypeEnum recommenderStrategyType = null;
     private static Map<String, Object> weightOfRecommender = new HashMap<>();
     private static Map<String, Object> seqOfRecommender = new HashMap<>();
     private static RecommendStrategyIF current = null;
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        // 系统启动后执行
+
+    }
 
     /**
      * 1. 重载推荐系统配置
@@ -34,9 +41,9 @@ public class RecommenderConfig {
      *
      * @return
      */
-    public RecommenderStrategyTypeEnum getRecommenderType(){
+    public RecommendStrategyTypeEnum getRecommenderType(){
         // todo 获取系统采用的推荐系统的类型
-        return RecommenderStrategyTypeEnum.CFBOU;
+        return RecommendStrategyTypeEnum.CFBOU;
     }
 
     /**
@@ -68,4 +75,5 @@ public class RecommenderConfig {
 
         return null;
     }
+
 }
