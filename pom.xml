@@ -108,6 +108,11 @@
             <version>1.9.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.gysoft.jdbc</groupId>
+            <artifactId>GyJdbc</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
     </dependencies>
 
